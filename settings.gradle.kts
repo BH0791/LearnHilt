@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "LearnHilt"
-include(":app")
+include(":firststep")
