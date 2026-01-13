@@ -9,6 +9,6 @@ const val TAG = "MYAPP"
 class App : Application(){
     override fun onCreate() {
         super.onCreate()
-        Log.d(TAG, "[1] ✔ [App.kt] Application créée → Hilt démarre")
+        Log.d(TAG, "[✔] [App.kt] Application créée → Hilt démarre")
     }
 }
