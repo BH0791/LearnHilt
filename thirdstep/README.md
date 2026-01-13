@@ -1,4 +1,6 @@
 # Third step
+## fournir un objet non‑injectable
+
 Diagramme des classes
 
 ```mermaid
@@ -36,3 +38,6 @@ classDiagram
     %% Module provides
     AppModule ..> AlertDialog : @Provides
 ```
+>[!Info] Information
+> - L’injection d’objets non-constructibles
+> - Les scopes via @InstallIn
