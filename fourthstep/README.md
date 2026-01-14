@@ -1,9 +1,12 @@
-# Third step
-## fournir un objet non‑injectable
+# fourtstrep
+Il montre :
 
-Diagramme des classes
+- l’injection en cascade (BaseDeDonnees → TablePersonne)
+- le module Hilt (AppModule)
+- l’Activity qui consomme tout (MainActivity)
+- l’objet fourni par module (AlertDialog)
 
-```mermaid
+`````mermaid
 classDiagram
     direction LR
 
@@ -37,18 +40,4 @@ classDiagram
 
     %% Module provides
     AppModule ..> AlertDialog : @Provides
-```
-certaines classes ne peuvent pas être injectées via :
-```kotlin
-kotlin
-@Inject constructor()
-```
-Exemples :
-
-- AlertDialog
-- Retrofit
-- RoomDatabase
-- SharedPreferences
-- OkHttpClient
-- DataStore
-- etc.
+`````
