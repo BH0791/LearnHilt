@@ -1,11 +1,7 @@
 # fourtstrep
-Il montre :
-
-- l’injection en cascade (BaseDeDonnees → TablePersonne)
-- le module Hilt (AppModule)
-- l’Activity qui consomme tout (MainActivity)
-- l’objet fourni par module (AlertDialog)
-
+- Option A — Introduire un ViewModel Hilt.Pour montrer l’injection dans un composant non‑Android.
+- Option B — Introduire un Repository + UseCase. Pour montrer une architecture propre.
+- Option C — Introduire un module Singleton (ApplicationComponent)
 `````mermaid
 classDiagram
     direction LR
