@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -21,13 +22,15 @@ import dagger.hilt.android.AndroidEntryPoint
 import fr.hamtec.fourthstep.data.local.BaseDeDonnees
 import fr.hamtec.fourthstep.data.local.DialogErreur
 import fr.hamtec.fourthstep.data.local.DialogInfo
+import fr.hamtec.fourthstep.data.model.MonViewModel
 import fr.hamtec.fourthstep.ui.theme.LearnHiltTheme
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    @Inject lateinit var bd: BaseDeDonnees
+   // @Inject lateinit var bd: BaseDeDonnees
+    private val monViewModel: MonViewModel by viewModels()
     @Inject
     @DialogInfo
     lateinit var dialogInfo: AlertDialog
@@ -41,7 +44,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        bd.afficherDonneesPersonnes()
+        monViewModel.afficherDonnees()
 
         setContent {
             Log.i(TAG, "[✔] [MainActivity] setContent() ")
